@@ -9,6 +9,7 @@ import {
   Dimensions,
   Platform,
 } from 'react-native';
+import { Card, ListItem, Button, Icon } from 'react-native-elements';
 import YouTube, { YouTubeStandaloneIOS, YouTubeStandaloneAndroid } from 'react-native-youtube';
 
 export default class First extends React.Component {
@@ -43,6 +44,15 @@ export default class First extends React.Component {
 
                     style={{ alignSelf: 'stretch', height: 300 }}
                   />
+                   <Card
+            title='Guitar Basic Lesson 1 - Only Forwards'
+            >
+            <Text style={{marginBottom: 10}}>
+                Forwards - Stand for playing in Ascending Order on the Guitar fretboard.
+                it a basic lesson to improve your finger movements on the guitar.
+            </Text>
+            
+            </Card>
             
           </View>
 

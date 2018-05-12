@@ -13,7 +13,7 @@ class Main extends Component{
             
             console.log('Done some tasks for 3 seconds')
             this.setState({currentScreen:'App'})
-        },3000)
+        },4000)
 
     }
     render(){

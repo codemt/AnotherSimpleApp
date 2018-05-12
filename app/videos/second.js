@@ -9,6 +9,7 @@ import {
   Dimensions,
   Platform,
 } from 'react-native';
+import { Card, ListItem, Button, Icon } from 'react-native-elements';
 import YouTube, { YouTubeStandaloneIOS, YouTubeStandaloneAndroid } from 'react-native-youtube';
 
 export default class Second extends React.Component {
@@ -43,6 +44,14 @@ export default class Second extends React.Component {
 
                     style={{ alignSelf: 'stretch', height: 300 }}
                   />
+                    <Card
+                       title='Guitar Basic Lesson 2 - Forwards and Backwards'
+                    >
+                    <Text style={{marginBottom: 10}}>
+                        Forwards and Backwards - In This Lesson , we play forwards and also go backwards to the same fret again.
+                    </Text>
+            
+                   </Card>
             
           
              </View> 

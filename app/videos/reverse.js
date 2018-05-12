@@ -1,19 +1,18 @@
-import React , { Component } from 'react';
+import React from 'react';
 import {
   StyleSheet,
+  View,
+  Text,
   ScrollView,
   TouchableOpacity,
   PixelRatio,
   Dimensions,
   Platform,
-  View, 
-  Text, 
-  Image,
 } from 'react-native';
+import { Card, ListItem, Button, Icon } from 'react-native-elements';
 import YouTube, { YouTubeStandaloneIOS, YouTubeStandaloneAndroid } from 'react-native-youtube';
-import { Card, ListItem, Button, Icon } from 'react-native-elements'
-import { Actions } from 'react-native-router-flux';
-export default class Reverse extends Component {
+
+export default class Reverse extends React.Component {
   state = {
     isReady: false,
     status: null,
@@ -30,22 +29,32 @@ export default class Reverse extends Component {
 
   render() {
     return (
-      
-<Card
-  title='Guitar Basic Lesson 2 - Backwards'
-  image={require('../images/pic2.jpg')}>
-  
-  <Text style={{marginBottom: 10}}>
-    The idea with React Native Elements is more about component structure than actual design.
-  </Text>
-  <Button
-  onPress={()=>Actions.backwards()}
-    icon={<Icon name='code' color='#ffffff' />}
-    backgroundColor='#03A9F4'
-    fontFamily='Lato'
-    buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
-    title='VIEW NOW' />
-</Card>
+               <View>
+                  <YouTube
+                    apiKey="AIzaSyBF6_Yez2VsGeL4AXNo-m7qqJgQlSXtDR4"
+                    videoId="1iachcWOlN4"   // The YouTube video ID
+                    play={true}             // control playback of video with true/false
+                    fullscreen={false}       // control whether the video should play in fullscreen or inline
+                    loop={true}             // control whether the video should loop when ended
+
+                    onReady={e => this.setState({ isReady: true })}
+                    onChangeState={e => this.setState({ status: e.state })}
+                    onChangeQuality={e => this.setState({ quality: e.quality })}
+                    onError={e => this.setState({ error: e.error })}
+
+                    style={{ alignSelf: 'stretch', height: 300 }}
+                  />
+                   <Card
+            title='Guitar Basic Lesson 3 - Only Reverse'
+            >
+            <Text style={{marginBottom: 10}}>
+                Reverse - No Need to Play Forwards to do the reverse movement. This technique helps to  play really fast parts of any song easily.
+            </Text>
+            
+            </Card>
+            
+          </View>
+
 
     );
     

@@ -39,9 +39,9 @@ export default class HomePage extends Component {
                 
             <Card
             title='Guitar Basic Lesson 1 - Only Forwards'
-            image={require('../images/basic2.png')}>
+            image={require('../images/forwards.png')}>
             <Text style={{marginBottom: 10}}>
-                The idea with React Native Elements is more about component structure than actual design.
+            “Music gives a soul to the universe, wings to the mind, flight to the imagination and life to everything.” ― Plato
             </Text>
             <Button
                 onPress={ ()=> Actions.forwards()}
@@ -54,11 +54,11 @@ export default class HomePage extends Component {
             </Card>
             <Card
             title='Guitar Basic Lesson 2 - Forwards & Backwards'
-            image={require('../images/scale2.png')}>
+            image={require('../images/backward.png')}>
             
             
             <Text style={{marginBottom: 10}}>
-                The idea with React Native Elements is more about component structure than actual design.
+            “If I were not a physicist, I would probably be a musician. I often think in music. I live my daydreams in music. I see my life in terms of music.” ― Albert Einstein
             </Text>
             <Button
                 onPress={ ()=> Actions.backwards()}
@@ -71,14 +71,14 @@ export default class HomePage extends Component {
             </Card>
             <Card
             title='Guitar Basic Lesson 3 - Reverse'
-            image={require('../images/scale2.png')}>
+            image={require('../images/reverse.png')}>
             
             
             <Text style={{marginBottom: 10}}>
-                The idea with React Native Elements is more about component structure than actual design.
+            “Music is a language that doesn’t speak in particular words. It speaks in emotions, and if it’s in the bones, it’s in the bones.” ― Keith Richards
             </Text>
             <Button
-                onPress={ ()=> Actions.forwards()}
+                onPress={ ()=> Actions.reverse()}
                 icon={<Icon name='code' color='#ffffff' />}
                 backgroundColor='#03A9F4'
                 fontFamily='Lato'
@@ -88,14 +88,14 @@ export default class HomePage extends Component {
             </Card>
             <Card
             title='Guitar Basic Lesson 4 - Horizontal and Vertical'
-            image={require('../images/pic2.jpg')}>
+            image={require('../images/horizontal.png')}>
             
             
             <Text style={{marginBottom: 10}}>
-                The idea with React Native Elements is more about component structure than actual design.
+            “One good thing about music, when it hits you, you feel no pain.” ― Bob Marley
             </Text>
             <Button
-                onPress={ ()=> Actions.forwards()}
+                onPress={ ()=> Actions.horizontal()}
                 icon={<Icon name='code' color='#ffffff' />}
                 backgroundColor='#03A9F4'
                 fontFamily='Lato'
@@ -105,14 +105,14 @@ export default class HomePage extends Component {
             </Card>
             <Card
             title='Guitar Basic Lesson 5 - 3 Major Scales'
-            image={require('../images/pic2.jpg')}>
+            image={require('../images/reverse.png')}>
             
             
             <Text style={{marginBottom: 10}}>
-                The idea with React Native Elements is more about component structure than actual design.
+            “Music was my refuge. I could crawl into the space between the notes and curl my back to loneliness.” ― Maya Angelou
             </Text>
             <Button
-                onPress={ ()=> Actions.forwards()}
+                onPress={ ()=> Actions.majorscales()}
                 icon={<Icon name='code' color='#ffffff' />}
                 backgroundColor='#03A9F4'
                 fontFamily='Lato'
@@ -122,14 +122,14 @@ export default class HomePage extends Component {
             </Card>
             <Card
             title='Guitar Basic Lesson 6 - All Major Scales'
-            image={require('../images/pic2.jpg')}>
+            image={require('../images/allscales.png')}>
             
             
             <Text style={{marginBottom: 10}}>
-                The idea with React Native Elements is more about component structure than actual design.
+            “Where words fail, music speaks.” ― Hans Christian Andersen
             </Text>
             <Button
-                onPress={ ()=> Actions.forwards()}
+                onPress={ ()=> Actions.allscales()}
                 icon={<Icon name='code' color='#ffffff' />}
                 backgroundColor='#03A9F4'
                 fontFamily='Lato'
@@ -139,14 +139,14 @@ export default class HomePage extends Component {
             </Card>
             <Card
             title='Guitar Basic Lesson 7 - Legatos'
-            image={require('../images/pic2.jpg')}>
+            image={require('../images/legato.png')}>
             
             
             <Text style={{marginBottom: 10}}>
-                The idea with React Native Elements is more about component structure than actual design.
+            “Music is … A higher revelation than all Wisdom & Philosophy” ― Ludwig van Beethoven
             </Text>
             <Button
-                onPress={ ()=> Actions.forwards()}
+                onPress={ ()=> Actions.legatos()}
                 icon={<Icon name='code' color='#ffffff' />}
                 backgroundColor='#03A9F4'
                 fontFamily='Lato'
