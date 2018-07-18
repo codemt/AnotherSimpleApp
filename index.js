@@ -2,12 +2,18 @@ import React , { Component} from 'react';
 import { AppRegistry } from 'react-native';
 import App from './App';
 import SplashScreen from './app/SplashScreen';
+import Login from './app/login';
+import fire from './app/config/fire';
 class Main extends Component{
     constructor(props){
 
 
         super(props);
-        this.state = { currentScreen : 'SplashScreen'};
+        this.state ={ 
+            
+            currentScreen : 'SplashScreen',
+            user : {},
+        };
         console.log('Start Doing Some Tasks')
         setTimeout(()=>{
             
@@ -16,10 +22,27 @@ class Main extends Component{
         },4000)
 
     }
+    componentDidMount(){ 
+
+        this.authListener();
+      
+      }
+      authListener() {
+        fire.auth().onAuthStateChanged((user) => {
+          //console.log(user);
+          if (user) {
+            this.setState({ user });
+            //localStorage.setItem('user', user.uid);
+          } else {
+            this.setState({ user: null });
+            //localStorage.removeItem('user');
+          }
+        });
+      }
     render(){
 
         const {currentScreen} = this.state;
-        let mainScreen = currentScreen === 'SplashScreen' ? <SplashScreen /> : <App />;
+        let mainScreen = currentScreen === 'SplashScreen' ? <SplashScreen /> :  this.state.user ? ( <App /> )  : (<Login /> );
         return mainScreen;
 
 

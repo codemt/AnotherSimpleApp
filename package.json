@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@shoutem/ui": "^0.23.4",
+    "firebase": "^5.2.0",
     "native-base": "^2.4.3",
     "react": "16.3.1",
     "react-native": "0.55.3",
