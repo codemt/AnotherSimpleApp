@@ -4,6 +4,7 @@ import App from './App';
 import SplashScreen from './app/SplashScreen';
 import Login from './app/login';
 import fire from './app/config/fire';
+import DrawerPage from './app/drawer/drawer';
 class Main extends Component{
     constructor(props){
 
@@ -42,7 +43,7 @@ class Main extends Component{
     render(){
 
         const {currentScreen} = this.state;
-        let mainScreen = currentScreen === 'SplashScreen' ? <SplashScreen /> :  this.state.user ? ( <App /> )  : (<Login /> );
+        let mainScreen = currentScreen === 'SplashScreen' ? <SplashScreen /> :  this.state.user ? ( <DrawerPage /> )  : (<Login /> );
         return mainScreen;
 
 

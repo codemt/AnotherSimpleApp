@@ -14,8 +14,7 @@ import {
 import YouTube, { YouTubeStandaloneIOS, YouTubeStandaloneAndroid } from 'react-native-youtube';
 import { Card, ListItem, Button, Icon } from 'react-native-elements';
 import { Actions } from 'react-native-router-flux';
-
-export default class HomePage extends Component {
+class Home extends Component {
   state = {
     isReady: false,
     status: null,
@@ -36,7 +35,7 @@ export default class HomePage extends Component {
 
       <ScrollView>
         
-                
+              
             <Card
             title='Guitar Basic Lesson 1 - Only Forwards'
             image={require('../images/forwards.png')}>
@@ -161,6 +160,7 @@ export default class HomePage extends Component {
     
   }
 }
+export default Home;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
