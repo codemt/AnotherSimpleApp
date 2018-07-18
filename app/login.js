@@ -57,6 +57,7 @@ class Login extends Component {
             onChangeText={password => this.setState({ password })} 
             ref="password" 
             type="password" 
+            secureTextEntry={true}
             placeholder="Password"
             />
             <Button
