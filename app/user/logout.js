@@ -4,12 +4,11 @@ Dimensions,
 View, 
 Image, 
 StyleSheet, 
-TextInput, 
-Text, 
-Button } from 'react-native';
+TextInput } from 'react-native';
+import {  Button , Text , Content } from 'native-base';
 import fire from '../config/fire';
 var window = Dimensions.get('window');
-class Logout extends Component {
+class SignOut extends Component {
     constructor(props) {
         super(props);
         this.logout = this.logout.bind(this);
@@ -23,17 +22,21 @@ class Logout extends Component {
     return (
         <View style={styles.container}> 
         <Image source={require('../../images/classlogo.png')} style={[styles.title]} />
-        <Text style={{fontSize:20, fontStyle:'italic',color:'grey'}}>   </Text>
+        <Text style={{fontSize:20, fontStyle:'italic',color:'grey'}}>    </Text>
             <Button
                 onPress={this.logout}
-                title="Logout"
+                title="Login"
                 color="#3498db"
-            />
+                style={{alignSelf: 'center',marginTop:10,width:100}}
+                info>
+                <Text>Logout</Text>
+            </Button>
+            
         </View>
     )
   }
 }
-export default Logout;
+export default SignOut;
 const styles = StyleSheet.create({
 
     container: {

@@ -4,9 +4,9 @@ Dimensions,
 View, 
 Image, 
 StyleSheet, 
-TextInput, 
-Text, 
-Button } from 'react-native';
+TextInput,  
+ } from 'react-native';
+import { Container, Header, Content, Button, Text , Item , Input } from 'native-base';
 import fire from './config/fire';
 var window = Dimensions.get('window');
 class Login extends Component {
@@ -44,27 +44,34 @@ class Login extends Component {
         <View style={styles.container}> 
         <Image source={require('../images/classlogo.png')} style={[styles.title]} />
         <Text style={{fontSize:20, fontStyle:'italic',color:'grey'}}> Login to Continue  </Text>
-            <TextInput
-            style={{width:300}}
+            <Item>
+            <Input 
+            placeholder='Rounded Textbox'
+            style={{width:200}}
             value={this.state.email} 
             onChangeText={email => this.setState({ email })}  
             ref="email" 
             type="email" placeholder="Email"
             />
-            <TextInput
-            style={{width:300}}
-            value={this.state.password} 
-            onChangeText={password => this.setState({ password })} 
-            ref="password" 
-            type="password" 
-            secureTextEntry={true}
-            placeholder="Password"
-            />
-            <Button
-                onPress={this.login}
-                title="Login"
-                color="#3498db"
-            />
+          </Item>
+          <Item>
+          <Input 
+          style={{width:300}}
+          value={this.state.password} 
+          onChangeText={password => this.setState({ password })} 
+          ref="password" 
+          type="password" 
+          secureTextEntry={true}
+          placeholder="Password"
+          />
+        </Item>
+            <Button onPress={this.login}
+            title="Login"
+            color="#3498db"
+            style={{alignSelf: 'center',marginTop:10}}
+            info>
+            <Text> Login </Text>
+            </Button>
         </View>
     )
   }
